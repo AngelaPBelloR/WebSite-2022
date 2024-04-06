@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.process_book{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(138, 145, 162) ;
+}
+
+/*--book--*/
+.bookmaker{
+    justify-content: center;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.sheet{
+    position: absolute;
+    top:0;
+    left:0; 
+    perspective: 1500px;  
+}
+
+.front,
+.back{
+    position: absolute;
+    top:0;
+    left:0;  
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front{
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 1px solid rgb(138, 145, 162);
+
+}
+
+.back{
+    z-index: 0;
+
+}
+
+.front-content,
+.back-content{
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content{
+    transform: rotateY(180deg);
+}
+
+/*--paper flip--*/
+.flipped .front,
+.flipped .back{
+    transform: rotateY(-180deg);
+}
+
+/*--controller buttons--*/
+
+button{
+    border: none;
+    background-color:rgb(138, 145, 162);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus{
+    outline: none;
+
+}
+
+button:hover i {
+    color: blueviolet;
+} 
+
+i{
+    background-color: rgb(138, 145, 162);
+    color:rgb(100, 82, 117);
+    border: none;
+    font-size: 50px;
+}
+
+/*--pages stack order--*/
+
+#s1{
+    z-index: 13;
+}
+
+#s2{
+    z-index: 12;
+}
+
+#s3{
+    z-index: 11;
+
+}
+#s4{
+    z-index: 10;
+}
+
+#s5{
+    z-index: 9;
+}
+
+
+#s6{
+    z-index: 8;
+}
+
+#s7{
+    z-index: 7;
+}
+
+#s8{
+    z-index: 6;
+
+}
+#s9{
+    z-index: 5;
+}
+
+#s10{
+    z-index: 4;
+}
+#s11{
+    z-index: 3;
+
+}
+#s12{
+    z-index: 2;
+}
+
+#s13{
+    z-index: 1;
+}
+
+
+
+
+
+/*--small devices--*/
+@media screen and (min-width: 320px){
+
+    .process_book{
+        height: 360px;
+        padding-top: 100px;
+        
+    }
+    
+    .bookmaker{
+        width: 320px;
+        height: 180px;
+    }
+
+    .front-content,
+    .back-content{
+        width: 160px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .front,
+    .back{
+        width: 160px;
+        height: auto;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .buttons{
+        display: flex;
+        width: 320px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .buttons button{
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+    }
+
+
+    i{
+        font-size: 24px;
+    }
+}
+
+/*--medium devices--*/
+@media screen and (min-width: 768px){
+
+    .process_book{
+        height: 560px;
+        padding-top: 100px;
+        
+    }
+  
+       
+    .bookmaker{
+        width: 768px;
+        height: 380px;
+        
+            
+    }
+
+    .front-content,
+    .back-content{
+        width: 340px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .front,
+    .back{
+        width: 340px;
+        height: auto;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .buttons{
+        display: flex;
+        width: 768px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .buttons button{
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+    }
+
+
+    i{
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    
+    .process_book{
+        height: 760px;
+        padding-top: 100px;
+        
+    }
+    .book_document{
+        display: block;
+        
+        width: 1200px;
+        height: 540px;
+    }   
+    .bookmaker{
+        width: 1200px;
+        height: 380px;
+        
+            
+    }
+
+    .front-content,
+    .back-content{
+        width: 540px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .front,
+    .back{
+        width: 540px;
+        height: auto;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .buttons{
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .buttons button{
+        margin-top: 200px;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+    }
+
+
+    i{
+        font-size: 50px;
+    }
+}
